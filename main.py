@@ -84,7 +84,7 @@ def mouse_callback(event, x, y, flags, param):
 cap = cv2.VideoCapture(0)
 rect_size = 100
 cv2.namedWindow('Cam')
-cv2.namedWindow('Resized')
+#cv2.namedWindow('Resized')
 cv2.setMouseCallback('Cam', mouse_callback)
 dragging = False
 resizing = False
@@ -101,7 +101,7 @@ while cap.isOpened():
     processed, resized = process(frame, start_point, end_point)
 
     cv2.imshow('Cam', processed)
-    cv2.imshow('Resized', resized)
+    #cv2.imshow('Resized', resized)
 
     # Move the rectangle based on arrow keys
     k = cv2.waitKey(1) & 0xFFF
